@@ -1,0 +1,582 @@
+[
+  {
+    "event_id": "EV-795-001",
+    "type": "investigation_launched",
+    "date": "795-03-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-755-001",
+    "depth": 0,
+    "details": {
+      "investigation_type": "non_termination_study",
+      "target": "omega_and_derivatives",
+      "scope": "Systematic cataloguing of all known non-terminating passages",
+      "motivation": "The Triple Omega divergence suggests untyped passages pose existential risk"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis, now 15 years on the Committee, begins systematic investigation of non-terminating passages. His father's late career was haunted by Omega; Brennis seeks a solution."
+  },
+  {
+    "event_id": "EV-798-003",
+    "type": "archive_accession",
+    "date": "798-08-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund", "archive_committee"],
+    "parent": "EV-798-001",
+    "depth": 0,
+    "details": {
+      "collection": "mund_papers",
+      "items": 623,
+      "includes": ["manuscripts", "working_notes", "reduction_traces"],
+      "catalog_prefix": "MND",
+      "special_note": "Brennis personally catalogues his father's papers on Omega"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Following Kelleth's death, Brennis oversees the accession of his father's papers. In cataloguing them, he finds extensive notes on the Omega problem marked 'UNSOLVED'."
+  },
+  {
+    "event_id": "EV-800-001",
+    "type": "anomaly_observed",
+    "date": "800-06-15",
+    "location": "capital_archives",
+    "actors": ["brennis_mund", "archive_staff"],
+    "parent": "EV-795-001",
+    "depth": 0,
+    "details": {
+      "phenomenon": "reduction_engine_halt",
+      "trigger_expression": "((λx.λy.(x (x y))) ((λx.λy.(x (x y))) I))",
+      "symptoms": "Classification engine enters infinite loop",
+      "duration": "7 hours before manual intervention",
+      "damage": "Section C-4 catalog entries corrupted"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "A catalogued passage causes the Archive's reduction engine to hang for 7 hours. This is not Omega itself, but a subtle variant that slipped through review. Brennis sees this as vindication of his father's fears."
+  },
+  {
+    "event_id": "EV-802-002",
+    "type": "theory_proposed",
+    "date": "802-09-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-800-001",
+    "depth": 0,
+    "details": {
+      "theory_name": "typing_discipline",
+      "claim": "Passages must declare what they accept — a boundary that prevents self-application",
+      "key_insight": "Omega requires self-application: (λx.x x) applied to (λx.x x). If we forbid passages from accepting themselves, Omega becomes impossible.",
+      "reception": "intrigued_but_skeptical"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis proposes the typing discipline. The core insight: Omega requires a passage that can accept itself as input. Types create boundaries — a passage of type τ₁→τ₂ can only accept inputs of type τ₁."
+  },
+  {
+    "event_id": "EV-805-001",
+    "type": "theory_proposed",
+    "date": "805-02-15",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-802-002",
+    "depth": 0,
+    "details": {
+      "theory_name": "base_types",
+      "claim": "Atomic classifications (nat, bool) form the foundation of the type system",
+      "types_introduced": ["nat", "bool"],
+      "nat_description": "The type of Church numerals",
+      "bool_description": "The type of Church booleans"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis introduces base types. His father's Church encodings (numerals, booleans) become the atoms from which all types are built. This grounds the abstract typing discipline in concrete classifications."
+  },
+  {
+    "event_id": "EV-805-002",
+    "type": "theory_proposed",
+    "date": "805-08-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-805-001",
+    "depth": 0,
+    "details": {
+      "theory_name": "arrow_types",
+      "claim": "If τ₁ and τ₂ are types, then τ₁→τ₂ is the type of passages from τ₁ to τ₂",
+      "notation": "τ₁ → τ₂",
+      "reading": "A passage that accepts τ₁ and produces τ₂",
+      "example": "The successor function has type nat → nat"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis introduces arrow types. This is the crucial move — types compose recursively. A function that takes a function has type (τ₁→τ₂)→τ₃. The arrow creates structure in the space of passages."
+  },
+  {
+    "event_id": "EV-807-001",
+    "type": "manuscript_written",
+    "date": "807-04-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-805-002",
+    "depth": 0,
+    "details": {
+      "title": "On the Necessity of Boundaries",
+      "pages": 134,
+      "chapters": 8,
+      "key_claim": "Types are not restrictions but protections — they prevent the dissolution that untyped passages risk",
+      "dedication": "To my father Kelleth, who saw the danger but not the solution",
+      "archive_catalog": "MND-B-001"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis's first major treatise. Argues that types are not a limitation but a necessary boundary, analogous to the boundaries that protect regions from Dens incursion. The dedication to Kelleth is poignant."
+  },
+  {
+    "event_id": "EV-810-001",
+    "type": "discovery",
+    "date": "810-03-15",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-807-001",
+    "depth": 0,
+    "details": {
+      "discovery_type": "typing_judgment",
+      "notation": "Γ ⊢ M : τ",
+      "reading": "In context Γ, expression M has type τ",
+      "gamma_definition": "A mapping from variable names to their types",
+      "significance": "Formalizes the typing discipline as a judgment"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis formalizes the typing judgment. The context Γ tracks what types have been assigned to names. This allows types to flow through abstractions and applications systematically."
+  },
+  {
+    "event_id": "EV-810-002",
+    "type": "discovery",
+    "date": "810-07-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-810-001",
+    "depth": 0,
+    "details": {
+      "discovery_type": "typing_rules",
+      "rules": [
+        "VAR: If (x:τ) ∈ Γ, then Γ ⊢ x : τ",
+        "ABS: If Γ, x:τ₁ ⊢ M : τ₂, then Γ ⊢ (λx.M) : τ₁→τ₂",
+        "APP: If Γ ⊢ M : τ₁→τ₂ and Γ ⊢ N : τ₁, then Γ ⊢ (M N) : τ₂"
+      ],
+      "rule_count": 3,
+      "significance": "The complete typing rules for simply typed passages"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis discovers the three typing rules. VAR retrieves types from context. ABS constructs function types. APP eliminates them. These three rules determine which passages are well-typed."
+  },
+  {
+    "event_id": "EV-812-002",
+    "type": "discovery",
+    "date": "812-02-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-810-002",
+    "depth": 0,
+    "details": {
+      "discovery_type": "omega_untypability",
+      "claim": "The Omega expression (λx.x x)(λx.x x) cannot be assigned any type",
+      "proof_sketch": "For (λx.x x) to be typed, x must have type τ such that τ = τ→σ for some σ. This requires infinite type τ = τ→τ→τ→..., which is not constructible.",
+      "significance": "breakthrough"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis proves Omega is untypable. The self-application (x x) requires x to have a type that equals its own arrow-type. No finite type satisfies this. Types prevent exactly what causes non-termination."
+  },
+  {
+    "event_id": "EV-815-001",
+    "type": "theory_contested",
+    "date": "815-05-01",
+    "location": "capital_archives",
+    "actors": ["torren_gast", "mella_vorn"],
+    "parent": "EV-812-002",
+    "depth": 0,
+    "details": {
+      "contested_theory": "typing_discipline",
+      "objection_title": "On the Impoverishment of Typed Passages",
+      "key_objection": "Types are too restrictive — they forbid many useful passages",
+      "example_given": "The identity function λx.x cannot be applied to all arguments in the typed system",
+      "supporters": 8
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Opposition emerges. Critics argue that types impoverish the calculus. The polymorphic identity (λx.x) must be given a specific type nat→nat or bool→bool — it cannot be truly universal."
+  },
+  {
+    "event_id": "EV-815-002",
+    "type": "debate_published",
+    "date": "815-09-15",
+    "location": "capital_archives",
+    "actors": ["brennis_mund", "torren_gast"],
+    "parent": "EV-815-001",
+    "depth": 0,
+    "details": {
+      "title": "Safety or Expressiveness: The Typing Debate",
+      "forum": "capital_philosophical_society",
+      "mund_position": "Safety is paramount — non-termination threatens the Archive itself",
+      "gast_position": "Expressiveness is paramount — a calculus that cannot express universal identity is crippled",
+      "outcome": "unresolved",
+      "audience_reception": "divided"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "The central debate of typed passage theory. Brennis argues safety; Gast argues expressiveness. This tension will drive the development of more sophisticated type systems in later generations."
+  },
+  {
+    "event_id": "EV-818-001",
+    "type": "manuscript_written",
+    "date": "818-06-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-815-002",
+    "depth": 0,
+    "details": {
+      "title": "The Typing Rules: A Complete Treatment",
+      "pages": 267,
+      "chapters": 14,
+      "contents": ["Base types", "Arrow types", "Typing judgment", "Inference rules", "Worked examples"],
+      "key_contribution": "First complete formal specification of the simply typed passage calculus",
+      "archive_catalog": "MND-B-002"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis's comprehensive treatise on typing rules. Includes 50 worked examples showing how to derive types for complex expressions. Becomes the standard reference for the typed passage tradition."
+  },
+  {
+    "event_id": "EV-825-001",
+    "type": "discovery",
+    "date": "825-02-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-818-001",
+    "depth": 0,
+    "details": {
+      "discovery_type": "type_safety_theorem",
+      "theorem_name": "preservation",
+      "claim": "If Γ ⊢ M : τ and M reduces to M', then Γ ⊢ M' : τ",
+      "meaning": "Reduction preserves types — a well-typed term remains well-typed after any reduction step",
+      "significance": "foundational"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis proves the Preservation Theorem. Types are preserved by reduction. This means type errors cannot arise during computation — they can only be present from the start."
+  },
+  {
+    "event_id": "EV-825-002",
+    "type": "discovery",
+    "date": "825-08-15",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-825-001",
+    "depth": 0,
+    "details": {
+      "discovery_type": "type_safety_theorem",
+      "theorem_name": "progress",
+      "claim": "If Γ ⊢ M : τ, then either M is a value or M can reduce to some M'",
+      "meaning": "Well-typed terms don't get stuck — they either are values or can continue computing",
+      "significance": "foundational"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis proves the Progress Theorem. Combined with Preservation, this yields Type Safety: well-typed programs don't go wrong. They either produce a value or reduce forever."
+  },
+  {
+    "event_id": "EV-830-001",
+    "type": "discovery",
+    "date": "830-04-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-825-002",
+    "depth": 0,
+    "details": {
+      "discovery_type": "normalization_theorem",
+      "theorem_name": "strong_normalization",
+      "claim": "Every well-typed term terminates — all reduction sequences are finite",
+      "proof_technique": "Reducibility candidates",
+      "significance": "breakthrough"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "The culmination of Brennis's program: strong normalization. Every typed passage terminates. This is the answer to his father's Omega problem — types guarantee termination."
+  },
+  {
+    "event_id": "EV-832-001",
+    "type": "manuscript_written",
+    "date": "832-01-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-830-001",
+    "depth": 0,
+    "details": {
+      "title": "On Termination and Types",
+      "pages": 189,
+      "chapters": 11,
+      "key_result": "Proof of strong normalization for simply typed passage calculus",
+      "significance": "The central result of typed passage theory",
+      "archive_catalog": "MND-B-003"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis publishes the normalization proof. This manuscript is later regarded as the most important result in typed passage theory. It proves that types solve the Omega problem completely."
+  },
+  {
+    "event_id": "EV-835-001",
+    "type": "discovery",
+    "date": "835-06-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-830-001",
+    "depth": 0,
+    "details": {
+      "discovery_type": "y_combinator_untypability",
+      "claim": "The Y combinator (fixed point combinator) cannot be typed",
+      "implication": "Recursion is not directly expressible in the simply typed calculus",
+      "notation": "Y = λf.((λx.f(x x))(λx.f(x x)))",
+      "observation": "The (x x) pattern makes Y untypable for the same reason as Omega"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis shows the Y combinator is untypable. This is the tradeoff: types prevent non-termination by preventing recursion. To regain recursion, later scholars will need more sophisticated type systems."
+  },
+  {
+    "event_id": "EV-838-001",
+    "type": "theory_proposed",
+    "date": "838-03-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-835-001",
+    "depth": 0,
+    "details": {
+      "theory_name": "primitive_recursion",
+      "claim": "Recursion on natural numbers can be recovered through a special recursor",
+      "recursor_type": "τ → (nat → τ → τ) → nat → τ",
+      "interpretation": "Given a base case and a step function, compute by induction on nat",
+      "significance": "Partial recovery of expressiveness"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis proposes primitive recursion as a typed alternative to the Y combinator. The recursor is a built-in that allows recursion on natural numbers without risking non-termination."
+  },
+  {
+    "event_id": "EV-842-001",
+    "type": "discovery",
+    "date": "842-09-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-838-001",
+    "depth": 0,
+    "details": {
+      "discovery_type": "church_encoding_typing",
+      "claim": "Church numerals can be typed as (τ→τ)→τ→τ",
+      "example": "ZERO: (τ→τ)→τ→τ where ZERO f x = x",
+      "example_2": "SUCC: ((τ→τ)→τ→τ) → ((τ→τ)→τ→τ)",
+      "significance": "His father's encodings survive into the typed world"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis shows how to type Church numerals. The type (τ→τ)→τ→τ captures the pattern: a numeral takes a function and a base, applies the function n times. Kelleth's encodings are preserved in the typed calculus."
+  },
+  {
+    "event_id": "EV-845-001",
+    "type": "personnel_change",
+    "date": "845-01-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-832-001",
+    "depth": 0,
+    "details": {
+      "change_type": "promotion",
+      "from_position": "committee_member",
+      "to_position": "senior_archivist",
+      "institution": "capital_archives",
+      "recognition": "For foundational contributions to typed passage theory"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis is promoted to Senior Archivist in recognition of his work on typed passages. He is now 65 years old and has spent 65 years at the Archives."
+  },
+  {
+    "event_id": "EV-850-001",
+    "type": "manuscript_written",
+    "date": "850-08-01",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-842-001",
+    "depth": 0,
+    "details": {
+      "title": "The Typed Passage Discipline: A Final Synthesis",
+      "pages": 412,
+      "chapters": 24,
+      "contents": ["Complete type system", "Normalization proof", "Church encodings", "Primitive recursion", "Philosophical reflections"],
+      "dedication": "To those who come after — may you extend what we could only begin",
+      "archive_catalog": "MND-B-004"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis's magnum opus. A comprehensive treatment of the simply typed passage calculus with philosophical reflections on the tension between safety and expressiveness. Acknowledges that more sophisticated type systems are needed."
+  },
+  {
+    "event_id": "EV-858-001",
+    "type": "personnel_change",
+    "date": "858-12-31",
+    "location": "capital_archives",
+    "actors": ["brennis_mund"],
+    "parent": "EV-850-001",
+    "depth": 0,
+    "details": {
+      "change_type": "retirement",
+      "from_position": "senior_archivist",
+      "years_of_service": 78,
+      "reason": "age_and_declining_health",
+      "final_catalogued_expression": "λx:nat.x — the typed identity on naturals"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis retires after 78 years at the Archives. His final catalogued expression is the typed identity on naturals — a simple expression that his father's untyped calculus could express universally, but which in the typed world must be specialized."
+  },
+  {
+    "event_id": "EV-862-001",
+    "type": "death",
+    "date": "862-03-15",
+    "location": "capital",
+    "actors": ["brennis_mund"],
+    "parent": "EV-858-001",
+    "depth": 0,
+    "details": {
+      "death_type": "natural",
+      "age": 82,
+      "cause": "age",
+      "legacy": "founder_of_typed_passage_tradition",
+      "epitaph": "He gave passages their boundaries"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis Mund dies at 82. His epitaph — 'He gave passages their boundaries' — captures his life's work. Where his father saw Omega as an enigma, Brennis saw it as a solvable problem. Types were his solution."
+  },
+  {
+    "event_id": "EV-863-001",
+    "type": "archive_accession",
+    "date": "863-06-01",
+    "location": "capital_archives",
+    "actors": ["archive_committee"],
+    "parent": "EV-862-001",
+    "depth": 0,
+    "details": {
+      "collection": "brennis_mund_papers",
+      "items": 534,
+      "includes": ["manuscripts", "working_notes", "typing_derivations"],
+      "catalog_prefix": "MND-B",
+      "special_collection": "typed_passage_archive"
+    },
+    "triggers_cascade": true,
+    "source": {
+      "type": "course",
+      "reference": "types-series/03-typed-passages"
+    },
+    "confidence": 1.0,
+    "notes": "Brennis's papers are accessioned to the Archive under prefix MND-B (Mund, Brennis), distinct from his father's MND prefix. The two collections together form the Mund Archive — the foundational documents of passage theory."
+  }
+]
