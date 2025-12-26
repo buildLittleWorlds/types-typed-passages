@@ -2,6 +2,8 @@
 
 *The Simply Typed Lambda Calculus through Brennis Mund's Typing Discipline*
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/buildLittleWorlds/types-typed-passages/blob/main/notebooks/01-the-omega-crisis.ipynb)
+
 > "He gave passages their boundaries" — Brennis Mund's epitaph
 
 ## Course Overview
